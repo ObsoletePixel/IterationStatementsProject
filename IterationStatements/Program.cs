@@ -7,7 +7,7 @@ namespace IterationStatements
     {
         static void Main(string[] args)
         {
-            // TODO: Follow the instructions provided in each comment below to complete the exercise.
+            // Follow the instructions provided in each comment below to complete the exercise.
             // Use the example given to guide your implementation.
 
             //Create a List called "numbers" - DONE!
@@ -15,35 +15,39 @@ namespace IterationStatements
             
             //-----START HERE------------------------------------------
 
-            //TODO - Create a variable of type int and name it "num"
-            //TODO - Initialize the variable with a value of 0
+            // Create a variable of type int and name it "num"
+            // Initialize the variable with a value of 0
+            int num = 0;
 
 
-
-            //TODO - Create a do-while loop using the existing brackets as a template.
+            // Create a do-while loop using the existing brackets as a template.
             // The existing brackets are placeholders for your loop code.
             // Inside this loop:
             // a) Increment "num" by 1
             // b) Then add "num" to the collection "numbers"
             //    Hint: Use "numbers.Add(num);" to add the current value of "num" to the list.
-
+            
+            do
             {
-                // Your code goes here
-                numbers.Add(/*num*/); //uncomment out `num` to add it to the collection "numbers"
-            } 
-            //TODO - Continue the loop while "num" is less than 100
+                numbers.Add(num); 
+                num++;
+            } while (num < 100) ;
+            
+            // Continue the loop while "num" is less than 100
             
 
-            //TODO - Create a while loop using the existing brackets as a template.
-            //TODO - Continue the loop while "num" is less than 200
+            // Create a while loop using the existing brackets as a template.
+            // Continue the loop while "num" is less than 200
             // The existing brackets are placeholders for your loop code.
             // Inside this loop:
             // a) Increment "num" by 1
             // b) Then add "num" to the collection "numbers"
             //    Hint: You can copy how this was done in the do-while loop
-
+            
+            while (num < 200)
             {
-                // Your code goes here
+                numbers.Add(num);
+                num++;
             }
             
 
@@ -52,11 +56,12 @@ namespace IterationStatements
             Console.WriteLine("Increase:");
 
 
-            //TODO - Create a foreach loop using the existing brackets as a template.
+            // Create a foreach loop using the existing brackets as a template.
             // The existing brackets are placeholders for your loop code.
             // Inside this loop, print each number in "numbers".
+            foreach (var i in numbers)
             {
-                // Your code goes here
+                Console.WriteLine($"{i}");
             }
              
 
@@ -65,7 +70,7 @@ namespace IterationStatements
             Console.WriteLine("Decrease:");
 
 
-            //TODO - Create a for loop using the existing brackets as a template.
+            // Create a for loop using the existing brackets as a template.
             // The existing brackets are placeholders for your loop code.
             // This loop will print the numbers in reverse order - from 200 to 1.
 
@@ -76,8 +81,10 @@ namespace IterationStatements
             // c) Decrement "i" by 1 in each iteration
 
             {
-                //TODO - Inside the loop, place numbers[i] inside of the Console.WriteLine() method
-                Console.WriteLine(numbers[i]); // Example placement of numbers[i] inside Console.WriteLine
+                for (int i = 199; i <= numbers.Count && i >= 0; i--)
+                {  
+                    Console.WriteLine(numbers[i]);
+                }
             }
 
             //------------End of exercise
